@@ -15,38 +15,53 @@ public class Redraw extends JComponent{
 			//Top wall
 			g.drawRect(0, 0, 500, 50);
 			g.fillRect(0, 0, 500, 50);
-			g.setColor(Color.GREEN);
+			g.setColor(Color.BLACK);
 			//Top wall
-			g.drawRect(0, 400, 500, 50);
-			g.fillRect(0, 400, 500, 50);
-			g.setColor(Color.GREEN);
+			g.drawRect(0, 410, 500, 50);
+			g.fillRect(0, 410, 500, 50);
+			g.setColor(Color.BLACK);
 			
 			//Player
 			g.drawRect(x, y, 50, 50);
 		    g.fillRect(x, y, 50, 50);
-		    g.setColor(Color.GREEN);
+		    g.setColor(Color.BLUE);
 		    
 		}
 	
 		public void moveLeft() {
-			x = x - 5;
-			 
-			repaint();
+			if(x - 5 >= 0) {
+				x = x - 5;
+				System.out.println("x: "+x); 
+				System.out.println("y: "+y);
+				repaint();
+			}
 		}
 		public void moveRight() {
+			if(x + 5 <= 435) {
 			x = x + 5;
-			 
+
+			System.out.println("x: "+x); 
+			System.out.println("y: "+y);
 			repaint();
+			}
 		}
 		public void moveUp() {
-			 
+			if(y - 5 >= 50) {
 			y = y - 5;
+
+			System.out.println("x: "+x); 
+			System.out.println("y: "+y);
 			repaint();
+			}
 		}
 		public void moveDown() {
-		 
+			if(y + 5 <= 360) {
 			y = y + 5;
+
+			System.out.println("x: "+x); 
+			System.out.println("y: "+y);
 			repaint();
+			}
 		}
 
 }

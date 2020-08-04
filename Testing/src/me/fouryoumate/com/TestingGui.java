@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 public class TestingGui extends JFrame implements KeyListener {
 	Redraw draw = new Redraw();
-	DrawWalls walls = new DrawWalls();
+//	DrawWalls walls = new DrawWalls();
 	static int x = 50;
 	static int y = 50;
 	JFrame frame = new JFrame();
