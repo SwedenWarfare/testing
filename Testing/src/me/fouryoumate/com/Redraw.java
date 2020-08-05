@@ -10,22 +10,29 @@ public class Redraw extends JComponent{
 
 		public int x = 50;
 		public int y = 50;
-		 
+		
+		public int[] xWalls = {0,60,100};
+		public int[] yWalls = {40,60,100};
 		public void paint(Graphics g){
 			//Top wall
 			g.drawRect(0, 0, 500, 50);
 			g.fillRect(0, 0, 500, 50);
 			g.setColor(Color.BLACK);
-			//Top wall
+			//Bottom wall
 			g.drawRect(0, 410, 500, 50);
 			g.fillRect(0, 410, 500, 50);
+			g.setColor(Color.BLACK);
+			//Side wall
+			g.drawRect(xWalls[0], yWalls[0], 50, 500);
+			g.fillRect(xWalls[0], yWalls[0], 50, 500);
 			g.setColor(Color.BLACK);
 			
 			//Player
 			g.drawRect(x, y, 50, 50);
 		    g.fillRect(x, y, 50, 50);
 		    g.setColor(Color.BLUE);
-		    
+		    //Testing
+		
 		}
 	
 		public void moveLeft() {
