@@ -26,15 +26,19 @@ public class Redraw extends JComponent{
 			g.drawRect(xWalls[0], yWalls[0], 50, 500);
 			g.fillRect(xWalls[0], yWalls[0], 50, 500);
 			g.setColor(Color.GREEN);
+			
+			//Wall 1
 			g.drawRect(xWalls[1], yWalls[1], 50, 100);
 			g.fillRect(xWalls[1], yWalls[1], 50, 100);
 			g.setColor(Color.GREEN);
+			
+			
 			//Player
 			g.drawRect(x, y, 50, 50);
 		    g.fillRect(x, y, 50, 50);
 		    g.setColor(Color.BLUE);
 		    //Testing
-		
+		    
 		}
 	
 		public void moveLeft() {
@@ -46,7 +50,7 @@ public class Redraw extends JComponent{
 			}
 		}
 		public void moveRight() {
-			if(x + 5 <= 435) {
+			if(x + 5 <= 435 ) {
 			x = x + 5;
 
 			System.out.println("x: "+x); 
